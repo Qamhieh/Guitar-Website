@@ -1,18 +1,26 @@
 p{
 color: #ffffff;
-font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+font-family: 'Caprasimo'; 
+/* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ; */
 text-align: center;
+font-weight: 200;
 }
 
 
 h1{
 color: #ffffff;
 text-align: center;
+  font-family: 'Graduate';
+  font-style: normal;
+  font-weight: 400;
 }
 
 h2{
 color: #ffffff;
 text-align: center;
+  font-family: 'Graduate';
+  font-style: normal;
+  font-weight: 400;
 }
 
 h3{
@@ -20,7 +28,7 @@ color: #ffffff;
 
 }
 
-..dropdown button{
+.dropdown button{
     background-color: hsl(0, 0%, 80%);
     color: white;
     padding: 10px 15px;
@@ -71,6 +79,6 @@ body {
 }
 
 header{
-background-color:;
+background-color:
 
 }
