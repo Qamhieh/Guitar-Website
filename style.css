@@ -1,9 +1,21 @@
 p{
 color: #ffffff;
 font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+text-align: center;
+}
+
+
+h1{
+color: #ffffff;
+text-align: center;
 }
 
 h2{
+color: #ffffff;
+text-align: center;
+}
+
+h3{
 color: #ffffff;
 
 }
@@ -52,10 +64,6 @@ color: #ffffff;
   bottom: 8px;
   left: 16px;
   padding: 30px;
-}
-
-h1{
-color: #ffffff;
 }
 
 body {
