@@ -12,32 +12,38 @@
 
 <body>
 
-    <div id="wrapper">
-    <header>
+<header>
+<div id="wrapper">
         <a href="index.html">
-        <img src="Asset 1.png" alt="AlterTunes" width="80px">
-   </a> 
-</header>
+        <img src="Asset 1.png" alt="AlterTunes" width="80px"></a> 
 </div>
 
-    <header>
+<div class="navbar">
+  <ul>
+    <li><a href="about-us.html">About Us</a></li>
 
-<nav class="navbar">
-        <a href="about-us.html">About Us</a>
-        <a href="browse-tunings.html">Browse Tunings</a>
-        <a href="submit-tuning.html">Submit Tuning</a>
-</nav>
- 
-<aside id="sidebar">
+    <li class="dropdown">
+      <a href="#" class="dropbtn">Browse Tunings ▾</a>
+      <ul class="dropdown-menu">
+        <li><a href="guitar-tunings.html">Guitar Tunings</a></li>
+        <li><a href="not-available.html">Bass Tunings</a></li>
+      </ul>
+        <li><a href="submit-tuning.html">Submit Tuning</a></li>
+    </li>
+  </ul>
+</div>
+</header>
+
+    <aside id="sidebar">
     <ul>
         <li>
-                    <a href="#my-tunings">My Tunings</a>
+            <a href="not-available.html">My Tunings</a>
         </li>
     
         <li>
-                    <a href="help">Help</a>
+            <a href="not-available.html">Help</a>
         </li>
-        </ul>
+    </ul>
 </aside> 
 
 <main></main>
@@ -46,7 +52,6 @@
   <img src="americanfootball.jpg" alt="American Football, 1999." style="width:80%;">
   <div class="bottom-left">All weird tunings welcome</div>
 </div>
-    </header>
 
 </body>
 </html>

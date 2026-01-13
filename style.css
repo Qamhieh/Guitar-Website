@@ -1,3 +1,59 @@
+
+
+/* Website Color */
+body {
+  background-color: #105a7c;
+}
+
+header{
+  background-color: #105a7c;
+}
+
+/* NAVBAR STYLING */
+.header{
+display: flex;
+
+}
+
+.navbar > ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.navbar li {
+  position: relative;
+}
+
+.navbar a {
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+}
+
+/* DROPDOWN 4 BROWSE TUNINGS */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  min-width: 180px;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+
+/* SIDEBAR STYLING */
+.sidebar{
+  height: 100%;
+  width:30%;
+  position: fixed; 
+}
+
 p{
 color: #ffffff;
 font-family: 'Caprasimo'; 
@@ -5,7 +61,6 @@ font-family: 'Caprasimo';
 text-align: center;
 font-weight: 200;
 }
-
 
 h1{
 color: #ffffff;
@@ -25,9 +80,17 @@ text-align: center;
 
 h3{
 color: #ffffff;
-
 }
 
+/* MAIN PAGE TEXT */
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+  padding: 30px;
+}
+
+/* GUITAR TUNINGS DROPDOWN MENU */
 .dropdown button{
     background-color: hsl(0, 0%, 80%);
     color: white;
@@ -58,27 +121,9 @@ color: #ffffff;
     background-color: hsl(0, 0%, 90%);
 }
  
-
-
+/* recheck what this refers to */
 .container {
   position: relative;
   text-align: center;
   color: white;
-}
-
-/* Bottom left text */
-.bottom-leftttt {
-  position: absolute;
-  bottom: 8px;
-  left: 16px;
-  padding: 30px;
-}
-
-body {
-  background-color: #105a7c;
-}
-
-header{
-background-color:
-
 }
