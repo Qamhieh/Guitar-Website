@@ -1,59 +1,74 @@
 
-
-/* Website Color */
 body {
   background-color: #105a7c;
 }
 
-header{
-  background-color: #105a7c;
-}
-
 /* NAVBAR STYLING */
-.header{
+header{
+font-family: 'Caprasimo'; 
 display: flex;
-
+justify-content:space-between ;
+align-items: center;
+background-color: #262324;
+padding: 2rem;
+margin: -1rem
 }
 
-.navbar > ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
+.header-nav{
+background-color: #262324;
+display: flex;
+font-family: 'Caprasimo'; 
 }
 
-.navbar li {
-  position: relative;
+.navbar-ul{
+display: flex;
+list-style: none;
+gap: 3rem;
 }
 
-.navbar a {
-  padding: 10px 15px;
+.header-a{
+  color: white;
   text-decoration: none;
-  display: block;
 }
 
 /* DROPDOWN 4 BROWSE TUNINGS */
+.dropdown {
+  position: relative;
+}
+
+.dropbtn {
+  display: block;
+}
+
 .dropdown-menu {
   display: none;
+  list-style: none;
   position: absolute;
+  padding: 0rem;
+  margin:0rem ;
   top: 100%;
   left: 0;
   background: white;
   min-width: 180px;
+  z-index: 1000;
 }
 
-.dropdown:hover .dropdown-menu {
+.dropdown:hover .dropdown-menu,
+.dropdown-menu:hover {
   display: block;
+  background-color: cornflowerblue;
 }
+
 
 
 /* SIDEBAR STYLING */
 .sidebar{
   height: 100%;
-  width:30%;
-  position: fixed; 
+  width:
+  position fixed 
 }
 
+/* FONT STUFF */
 p{
 color: #ffffff;
 font-family: 'Caprasimo'; 
@@ -102,7 +117,6 @@ color: #ffffff;
     display: block;
     color: black;
     text-decoration: none;
-    padding: 10px 15px;
 }
 .dropdown .content{
     display: none;
@@ -126,4 +140,27 @@ color: #ffffff;
   position: relative;
   text-align: center;
   color: white;
+}
+
+/* LINK COLORS */
+a:link {
+  color:white;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: white
+}
+
+a:hover {
+  color: #5b843b;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: #5b843b;
+  background-color: transparent;
+  text-decoration: underline;
 }
