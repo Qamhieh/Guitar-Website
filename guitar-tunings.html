@@ -11,66 +11,56 @@
 </head>
 
 <body>
+  <!-- NAVBAR -->
 <header>
 <div id="logo">
     <a href="index.html">
     <img src="Asset 1.png" alt="AlterTunes" width="80px"></a> 
 </div>
 <nav class="header-nav">
-  <ul class="navbar-ul">
-    <li class="header-a"><a href="about-us.html">About Us</a></li>
-    <li class="dropdown">
-      <a href="#" class="dropbtn" class="header-a">Browse Tunings ▾</a>
-      <ul class="dropdown-menu">
-        <li class="header-a"><a href="guitar-tunings.html">Guitar Tunings</a></li>
-        <li class="header-a"><a href="not-available.html">Bass Tunings</a></li>
-      </ul>
-        <li><a href="submit-tuning.html">Submit Tuning</a></li>
-    </li>
-  </ul>
+<ul class="navbar-ul">
+  <li class="header-a"><a href="about-us.html">About Us</a></li>
+
+  <li class="dropdown">
+    <a href="#" class="dropbtn header-a">Browse Tunings ▾</a>
+    <ul class="dropdown-menu">
+      <li><a href="guitar-tunings.html">Guitar Tunings</a></li>
+      <li><a href="not-available.html">Bass Tunings</a></li>
+    </ul>
+  </li>
+  <li class="header-a"><a href="not-available.html">My Tunings</a></li>
+  <li class="header-a"><a href="submit-tuning.html">Submit Tuning</a></li>
+    <li class="header-a"><a href="not-available.html">Help</a></li>
+</ul>
 </nav>
 </header>
 
-<aside id="sidebar">
-    <ul>
-        <li>
-                    <a href="#my-tunings">My Tunings</a>
-        </li>
-    
-        <li>
-                    <a href="help">Help</a>
-        </li>
-        </ul>
-</aside> 
-
+<h1>Guitar Tunings</h1>
 <h2>Browse by Category</h2>
 
-
-<div class="dropdown">
-<button>Open Tunings</button>
-<div class="content">
+<div class="drpdwn-wrapper">
+  <div class="drpdwn-tunings" id="drpdwn-id">
+<button class="drpdwn-button">Open Tunings</button>
+   <div class="drpdwn-content">
     <a href="">Open E</a>
     <a href="">Open D</a>
     <a href="">Open A</a>
     <a href="">Open G</a>
-    <a href="">Drop D</a>
-    <a href="">Doubled Drop D</a>
-    <a href="">DADGAD</a>
-</div>
+    <a href="">DADGAD</a> 
+   </div>
+  </div>
 </div>
 
-<div class="dropdown">
-<button>Open Tunings</button>
-<div class="content">
-    <a href="">Open E</a>
-    <a href="">Open D</a>
-    <a href="">Open A</a>
-    <a href="">Open G</a>
-    <a href="">Drop D</a>
-    <a href="">Doubled Drop D</a>
-    <a href="">DADGAD</a>
-</div>
-</div>
+<!-- JAVASCRIPT -->
+<script>
+  const dropdown = document.getElementById("drpdwn-id");
+  const button = dropdown.querySelector(".drpdwn-button");
+
+  button.addEventListener("click", () => {
+    dropdown.classList.toggle("open");
+  });
+</script>
 
 </body>
+
 </html>
