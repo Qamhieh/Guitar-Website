@@ -1,6 +1,7 @@
 
 body {
   background-color: #042432;
+
 }
 
 /* FONT STUFF */
@@ -11,6 +12,7 @@ font-family: 'Caprasimo';
 text-align: center;
 font-size: 1.5rem;
 letter-spacing: .05rem;
+margin:6rem ;
 }
 
 h1{
@@ -33,6 +35,8 @@ h3{
 color: #ffffff;
 font-family: 'Caprasimo'; 
 letter-spacing: .05rem;
+margin:7rem ;
+
 }
 
 
