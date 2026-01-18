@@ -4,7 +4,9 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+    overflow-x: hidden;
+    overflow-y: auto; 
+    min-height: 100vh;}
 
 /* FONT STUFF */
 p{
@@ -23,6 +25,8 @@ text-align: center;
   font-family: 'Graduate';
   font-style: normal;
   font-weight: bold;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
 h2{
@@ -37,8 +41,8 @@ h3{
 color: #ffffff;
 font-family: 'Caprasimo'; 
 letter-spacing: .05rem;
-margin:7rem ;
-
+margin-top:2rem ;
+margin-bottom: 2rem;
 }
  
 
@@ -76,11 +80,10 @@ justify-content:space-between ;
 align-items: center;
 background-color: #4f4f4f;
 padding: 2rem;
-margin: -1rem
 }
 
 .header-nav{
-background-color: #5b5658;
+background-color: #7d1d43;
 display: flex;
 font-family: 'Caprasimo'; 
 }
@@ -95,17 +98,12 @@ gap: 3rem;
   color: white;
   text-decoration: none;
 }
-
-
-
 /* NAVBAR DROPDOWN (BROWSE TUNINGS) */
 .dropdown {
-  position: relative;
-}
+  position: relative;}
 
 .dropbtn {
-  display: block;
-}
+  display: block;}
 
 .dropdown-menu {
   display: none;
@@ -123,23 +121,20 @@ gap: 3rem;
 .dropdown:hover .dropdown-menu,
 .dropdown-menu:hover {
   display: block;
-  background-color: cornflowerblue;
-}
+  background-color: rgb(37, 47, 65);}
 
 
 
 /* HOME PAGE IMAGE */
 .image {
   width: 100%;
-  position: relative; /* Necessary if you want to position "bottom-left" text inside it */
-}
+  position: relative;}
 
 .image img {
-  width: 100%;        /* Makes the image follow the div's 25rem width */
-  height: auto;       /* Maintains aspect ratio */
-  display: block;     /* Removes weird gaps at the bottom of the image */
-  object-fit: contain; 
-}
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain; }
 
 .bottom-left {
   position: absolute;
@@ -152,6 +147,18 @@ gap: 3rem;
   font-weight: 800;
   font-size: 3rem;
 }
+
+/* SUBMISSION FORM */
+iframe{
+display: block;
+margin: 0 auto;   
+width: 80%;
+min-height: 101rem;
+margin-bottom: 5rem; 
+margin-top: 5rem; 
+border: none;
+}
+
 
 /* FOOTER */
 footer {
