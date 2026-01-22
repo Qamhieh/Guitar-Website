@@ -6,7 +6,8 @@ body {
     box-sizing: border-box;
     overflow-x: hidden;
     overflow-y: auto; 
-    min-height: 100vh;}
+    min-height: 100vh;
+  }
 
 /* FONT STUFF */
 p{
@@ -15,20 +16,48 @@ font-family: 'Caprasimo';
 /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ; */
 text-align: center;
 font-size: 1.5rem;
+letter-spacing: .1rem;
+line-height: 2rem;
+margin-bottom: 6rem;
+padding-left: 6rem;
+padding-right: 5rem;
+}
+
+/* ABOUT US FONT STUFF */
+.p1{
+color: #ffffff;
+font-family: 'Caprasimo'; 
+/* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ; */
+text-align: center;
+font-size: 1.5rem;
 letter-spacing: .05rem;
-margin-bottom: 5rem;
-padding-left: 4rem;
-    padding-right: 4rem;
+margin:1rem ;
+margin-bottom: 6rem;
 }
 
 h1{
 color: #ffffff;
-text-align: center;
+text-align: left;
+  font-family: 'Graduate';
+  font-style: normal;
+  font-weight: bold;
+  margin-top: 6rem;
+  margin-bottom: 1rem;
+  margin-left:5rem;
+  font-size: 3rem;
+}
+
+/* H1 HEADERS WITH A LITTLE LESS TOP MARGIN */
+.h1{
+color: #ffffff;
+text-align: left;
   font-family: 'Graduate';
   font-style: normal;
   font-weight: bold;
   margin-top: 3rem;
   margin-bottom: 1rem;
+  margin-left:5rem;
+font-size: 3rem;
 }
 
 h2{
@@ -43,9 +72,9 @@ h3{
 color: #ffffff;
 font-size: 1.5rem;
 font-family: 'Caprasimo'; 
-letter-spacing: .05rem;
+letter-spacing: .1rem;
 margin-left:3rem ;
-margin-bottom: 5rem;
+margin-bottom: 6rem;
 }
  
 
@@ -75,9 +104,11 @@ a:active {
 
 
 
+
 /* NAVBAR STYLING */
 header{
 font-family: 'Caprasimo'; 
+letter-spacing: .07rem;
 display: flex;
 justify-content:space-between ;
 align-items: center;
@@ -89,6 +120,7 @@ padding: 2rem;
 background-color: #262324;
 display: flex;
 font-family: 'Caprasimo'; 
+letter-spacing: .07rem;
 }
 
 .navbar-ul{
@@ -129,6 +161,7 @@ gap: 3rem;
 
 
 
+
 /* HOME PAGE IMAGE */
  .image-cont {
 width: 100%;
@@ -157,17 +190,7 @@ font-weight: 800;
 font-size: 5vw;
 }
 
-/* ABOUT US FONT STUFF */
-.p1{
-color: #ffffff;
-font-family: 'Caprasimo'; 
-/* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ; */
-text-align: center;
-font-size: 1.5rem;
-letter-spacing: .05rem;
-margin:1rem ;
-margin-bottom: 6rem;
-}
+
 
 
 /* SUBMISSION FORM */
@@ -189,9 +212,9 @@ footer {
     padding: 0.5rem; 
     text-align: center;
     width: 100%;
-    position: fixed;
+    /* position: fixed;
     bottom: 0;
-    left: 0;
+    left: 0; */
 }
 
 .footer-content p {
@@ -210,19 +233,18 @@ footer {
 
 
 /* HORIZONTAL SLIDING BUTTON FOR TUNINGS PAGE */
-/* ========== LAYOUT WRAPPER ========== */
-/* This ensures the entire button + tray unit stays centered on your page */
+/*LAYOUT WRAPPER IMPORTANT FOR CENTERING EVERYTHING */
 .drpdwn-wrapper {
   display: flex;
   flex-direction: column; 
-  align-items: center; /* Centering everything horizontally */
+  align-items: center; 
   justify-content: center;
   width: 100%;
   gap: 4rem; 
   padding: 2rem;
 }
 
-/* ========== DROPDOWN COMPONENT ========== */
+/* DROPDOWN THINGY */
 .drpdwn-tunings {
   display: inline-flex;      
   align-items: center; 
@@ -230,60 +252,62 @@ footer {
   background: transparent;
 }
 
-/* --- Main Button --- */
+/* BUTTON */
 .drpdwn-button {
   padding: 1.5rem 3rem; 
   font-size: 1.8rem;      
   font-weight: 700;
-  background: #2c3e50;
+  background: #233550;
   color: white;
   border: none;
   cursor: pointer;
   z-index: 5;
   white-space: nowrap;
+  font-family: 'Graduate';
 }
 
-/* --- The Slide-out Tray --- */
+/* SLIDING TRAY CONTENT */
 .drpdwn-content {
   width: 0;
   opacity: 0;
-  overflow: hidden;
-  background: #644848; 
-  height: 4rem; /* Fixed height for consistency */
+  overflow-x: auto; 
+  overflow-y: hidden;
+  background: #4C5C74; 
+  height: 4rem;
   display: flex;
   align-items: center;
   transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth; 
+  overflow-x: auto;
 }
 
-/* OPEN state: Reduced slide width for better focus */
+/* OPEN */
 .drpdwn-tunings.active .drpdwn-content {
   width: 27rem; 
   opacity: 1;
-  border-left: 2px solid #3498db; /* Subtle blue divider */
+  border-left: 0.16 solid #3498db;
 }
 
-/* --- The Options Container (The "Shelf") --- */
+/* SLIDING TRAY */
 .drpdwn-panel {
   display: flex;
   align-items: center;
-  justify-content: center; /* THIS CENTERS THE PILLS INSIDE THE TRAY */
-  gap: 2rem;               /* THIS CREATES THE SPACE BETWEEN BUTTONS */
-  width: 100%;             /* Occupy full tray width */
-  min-width: 500px;        /* Matches the tray width to prevent squishing */
-  padding: 0 2rem;
+  justify-content: flex-start;
+  gap: 2rem;          
+width: max-content;
+padding: 0 2rem;
+font-family: 'Graduate';
 }
 
-/* --- The Pill Buttons --- */
+/* OPTIONS ON TRAY */
 .drpdwn-panel a {
   flex-shrink: 0; 
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  
-  /* Padding creates the pill shape */
-  padding: 1rem 2.5rem; 
-  
-  background: #34495e;
+    padding: 1rem 2.5rem; 
+  background: #233550;
   color: white;
   text-decoration: none;
   border-radius: 50px;
@@ -294,8 +318,7 @@ footer {
 
 .drpdwn-panel a:hover {
   background: #3498db;
-  transform: translateY(-2px); /* Slight lift effect */
-}
+  transform: translateY(-2px);}
 
 /* Hide scrollbar just in case of overflow on small screens */
 .drpdwn-panel {
@@ -303,4 +326,13 @@ footer {
 }
 .drpdwn-panel::-webkit-scrollbar {
   display: none;
+}
+
+.drpdwn-content::-webkit-scrollbar {
+  display: none;
+}
+.drpdwn-content {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+
 }

@@ -35,11 +35,10 @@
 </nav>
 </header>
 
-<h1>Guitar Tunings</h1>
-<h2>Browse by Category</h2>
+<h1 class="h1">Guitar Tunings</h1>
 
 <div class="drpdwn-wrapper">
-  
+
   <div class="drpdwn-tunings">
     <button class="drpdwn-button">Drop Tunings</button>
     <div class="drpdwn-content">
@@ -52,7 +51,6 @@
   </div>
 
 
-  <!-- HORIZONTAL DROPDOWN -->
   <div class="drpdwn-tunings">
     <button class="drpdwn-button">Open Tunings</button>
     <div class="drpdwn-content">
@@ -60,58 +58,43 @@
         <a href="#" data-tuning="open-e">Open E</a>
         <a href="#" data-tuning="open-d">Open D</a>
         <a href="#" data-tuning="open-g">Open G</a>
-                <a href="#" data-tuning="open-e">Open E</a>
-        <a href="#" data-tuning="open-d">Open D</a>
-        <a href="#" data-tuning="open-g">Open G</a>
-        <a href="#" data-tuning="open-e">Open E</a>
-        <a href="#" data-tuning="open-d">Open D</a>
-        <a href="#" data-tuning="open-g">Open G</a>
-
       </div>
     </div>
   </div>
 
-</div>
+    <div class="drpdwn-tunings">
+    <button class="drpdwn-button">Rock Tunings</button>
+    <div class="drpdwn-content">
+      <div class="drpdwn-panel">
+        <a href="#" data-tuning="drop-d">Drop D</a>
+        <a href="#" data-tuning="open-d">Open D</a>
+        <a href="#" data-tuning="dadgad">DADGAD</a>
+        <a href="#" data-tuning="narco">NARCO</a>
+      </div>
+    </div>
+  </div>
 
-<!-- ACCORDION MENU FOR RANDOM TUNINGS -->
- <div class="menu">
-  <li class="menu-item" id="profile">
-    <a href="#profile" class="btn">
-      <i class="far fa-user"></i>
-      Profile
-    </a>
-    <div class="menu-item__sub">
-      <a href="#">Posts</a>
-      <a href="#">Picture</a>
+
+  <div class="drpdwn-tunings">
+    <button class="drpdwn-button">Emo Tunings</button>
+    <div class="drpdwn-content">
+      <div class="drpdwn-panel">
+        <a href="#" data-tuning="facgce">FACGCE</a>
+        <a href="#" data-tuning="open-d">Open D</a>
+      </div>
     </div>
-  </li>
-  <li class="menu-item" id="messages">
-    <a href="#messages" class="btn">
-      <i class="far fa-envelope"></i>
-      Messages
-    </a>
-    <div class="menu-item__sub">
-      <a href="#">New</a>
-      <a href="#">Sent</a>
-      <a href="#">Spam</a>
+  </div>
+
+  <div class="drpdwn-tunings">
+    <button class="drpdwn-button">Metal Tunings</button>
+    <div class="drpdwn-content">
+      <div class="drpdwn-panel">
+        <a href="#" data-tuning="open-e">Drop C</a>
+      </div>
     </div>
-  </li>
-  <li class="menu-item" id="settings">
-    <a href="#settings" class="btn">
-      <i class="fas fa-cog"></i>
-      Settings
-    </a>
-    <div class="menu-item__sub">
-      <a href="#">Password</a>
-      <a href="#">Language</a>
-    </div>
-  </li>
-  <li class="menu-item">
-    <a href="#" class="btn">
-      <i class="fas fa-sign-out-alt"></i>
-      Logout
-    </a>
-  </li>
+  </div>
+
+
 </div>
 
 
@@ -123,5 +106,19 @@
   </div>
 </footer>
 
+<script>
+// Select all dropdown content areas that need horizontal scrolling
+const scrollContainers = document.querySelectorAll('.drpdwn-content');
+
+scrollContainers.forEach((el) => {
+  el.addEventListener("wheel", (evt) => {
+    // Prevent the default vertical page scroll
+    evt.preventDefault();
+    
+    // Convert vertical wheel movement (deltaY) into horizontal scroll (scrollLeft)
+    el.scrollLeft += evt.deltaY;
+  });
+});
+</script>
 </body>
 </html>
