@@ -35,7 +35,9 @@
 </nav>
 </header>
 
-<h1>Narco</h1>
+<h1 class="h1-small">  
+  <a href="guitar-tunings.html" title="Back to browsing"> Guitar Tunings </a> > Narco
+</h1>
 
 <!-- TUNING PEGS -->
 <div class="tuningpage-layout">
@@ -77,8 +79,20 @@
     
     <!-- ACCORDION MENU4 SONG TABS -->
     <div class="accordion">
-       </div>
-
+ <div class="accordion-item">
+    <button class="accordion-song">
+      Third Eye Blind - Narcolepsy
+    </button>
+    <div class="accordion-content">
+      <ul class="link-list">
+        <li>Tabs <a href="#">https://wtvlink.com</a></li>
+        <li>Video Tutorial <a href="#">https://wtvlink.com</a></li>
+      </ul>
+    </div>
+     </div>
+  
+    </div>
+    
   </main>
 
 <!-- ABOUT SECTION -->
@@ -114,6 +128,27 @@ function playNote(noteName, element) {
     element.classList.remove('is-playing');
   }, ringDuration);
 }</script>
+
+<!-- ACCORDION -->
+
+<script>
+  document.querySelectorAll('.accordion-song').forEach(button => {
+    button.addEventListener('click', () => {
+        const accordionContent = button.nextElementSibling;
+
+        // Toggle the 'active' state
+        button.classList.toggle('active');
+
+        if (button.classList.contains('active')) {
+            // Opens the menu to its natural height
+            accordionContent.style.maxHeight = accordionContent.scrollHeight + "px";
+        } else {
+            // Closes the menu
+            accordionContent.style.maxHeight = 0;
+        }
+    });
+});
+</script>
 
 <footer>
   <div class="footer-content">

@@ -41,7 +41,7 @@ text-align: left;
   font-family: 'Graduate';
   font-style: normal;
   font-weight: bold;
-  margin-top: 6rem;
+  margin-top: 3rem;
   margin-bottom: 1rem;
   margin-left:5rem;
   font-size: 3rem;
@@ -58,6 +58,19 @@ text-align: left;
   margin-bottom: 1rem;
   margin-left:5rem;
 font-size: 3rem;
+}
+
+/* FOR TUNING PAGES */
+.h1-small{
+color: #ffffff;
+text-align: left;
+  font-family: 'Graduate';
+  font-style: normal;
+  font-weight: bold;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  margin-left:3rem;
+  font-size: 1.5rem;
 }
 
 h2{
@@ -91,13 +104,13 @@ a:visited {
 }
 
 a:hover {
-  color: #5b843b;
+  color: #5d6d3e;
   background-color: transparent;
   text-decoration: underline;
 }
 
 a:active {
-  color: #5b843b;
+  color: #5d6d3e;
   background-color: transparent;
   text-decoration: underline;
 }
@@ -274,7 +287,8 @@ footer {
 
 .tuning-page-section {
   background-color: transparent;
-  padding-bottom: 5vw;
+  padding-bottom: 0;
+  margin-bottom: 0;
   display: flex;
   justify-content: flex-start;
 }
@@ -339,8 +353,62 @@ footer {
 }
 
 .is-playing {
-  animation: shakeNote 0.12s linear infinite; /* Triggered by JS */
+  animation: shakeNote 0.12s linear infinite; 
 }
+
+
+/* ACCORDION MENY 4 SONGS */
+/* ACCORDION WRAPPER */
+.accordion {
+  width: 100%;
+  max-width: 50rem;
+  margin-top: 0rem;
+  padding-top: 0rem;
+}
+
+/* SONG TITLE BAR */
+.accordion-song {
+  width: 100%;
+  padding: 1rem;
+  background-color: #5d6d3e;
+  color: white;
+  border: none;
+  text-align: left;
+  font-family: 'Graduate', serif;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: block;
+}
+
+/* LINK SECTION gray */
+.accordion-content {
+  background-color: #4a5d73;
+  overflow: hidden;
+  max-height: 0; 
+  transition: max-height 0.3s ease-out;
+}
+
+/* LIST OF LINKS */
+.link-list {
+  list-style: none;
+  padding: 1rem;
+  margin: 0;
+  font-family: 'Graduate';
+  color: white;
+  font-size: 0.9rem;
+}
+
+.link-list li {
+  margin-bottom: 0.5rem;
+}
+
+.link-list a {
+  color: #a0c4ff; /* Lighter blue for the links to stand out */
+  text-decoration: underline;
+}
+
+
+
 
 /* ABOUT SECTION */
 .abt-tuning {
@@ -374,9 +442,6 @@ footer {
   text-align: left; 
   width:60%
 }
-
-/* ACCORDION MENY 4 SONGS */
-
 
 
 
