@@ -24,3 +24,11 @@ allDropdowns.forEach(dropdown => {
 document.addEventListener('click', () => {
     allDropdowns.forEach(dropdown => dropdown.classList.remove('active'));
 });
+
+// BROWSINGPAGE-make mouse scroll sideways
+const scrollContainer = document.querySelector('.drpdwn-panel');
+
+scrollContainer.addEventListener('wheel', (evt) => {
+    evt.preventDefault();
+    scrollContainer.scrollLeft += evt.deltaY;
+});

@@ -1,7 +1,7 @@
 
 body {
   background-color: #042432;
-    margin: 0;
+  margin: 0;
     padding: 0;
     box-sizing: border-box;
     overflow-x: hidden;
@@ -16,7 +16,9 @@ font-family: 'Caprasimo';
 text-align: center;
 font-size: 1.5rem;
 letter-spacing: .05rem;
-margin:6rem ;
+margin-bottom: 5rem;
+padding-left: 4rem;
+    padding-right: 4rem;
 }
 
 h1{
@@ -26,7 +28,7 @@ text-align: center;
   font-style: normal;
   font-weight: bold;
   margin-top: 3rem;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
 }
 
 h2{
@@ -39,10 +41,11 @@ text-align: center;
 
 h3{
 color: #ffffff;
+font-size: 1.5rem;
 font-family: 'Caprasimo'; 
 letter-spacing: .05rem;
-margin-top:2rem ;
-margin-bottom: 2rem;
+margin-left:3rem ;
+margin-bottom: 5rem;
 }
  
 
@@ -78,12 +81,12 @@ font-family: 'Caprasimo';
 display: flex;
 justify-content:space-between ;
 align-items: center;
-background-color: #4f4f4f;
+background-color: #262324;
 padding: 2rem;
 }
 
 .header-nav{
-background-color: #7d1d43;
+background-color: #262324;
 display: flex;
 font-family: 'Caprasimo'; 
 }
@@ -96,8 +99,7 @@ gap: 3rem;
 
 .header-a{
   color: white;
-  text-decoration: none;
-}
+  text-decoration: none;}
 /* NAVBAR DROPDOWN (BROWSE TUNINGS) */
 .dropdown {
   position: relative;}
@@ -109,44 +111,64 @@ gap: 3rem;
   display: none;
   list-style: none;
   position: absolute;
-  padding: 0rem;
+  padding: 0.2rem;
+  padding-left: .5rem;
   margin:0rem ;
   top: 100%;
   left: 0;
   background: white;
-  min-width: 180px;
+  min-width: 9.6rem;
   z-index: 1000;
 }
 
 .dropdown:hover .dropdown-menu,
 .dropdown-menu:hover {
   display: block;
-  background-color: rgb(37, 47, 65);}
+  background-color:#4C5C74;}
+
 
 
 
 /* HOME PAGE IMAGE */
-.image {
-  width: 100%;
-  position: relative;}
-
-.image img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: contain; }
-
-.bottom-left {
-  position: absolute;
-  bottom: 30rem;
-  left: 5rem;
-  color: rgb(67, 156, 25);
-  background: rgba(0, 0, 0, 0.5);
-  padding: 0.2rem 0.5rem;
-  font-family: 'Graduate';
-  font-weight: 800;
-  font-size: 3rem;
+ .image-cont {
+width: 100%;
+position: relative;
+margin: 0;
+padding: 0;
 }
+
+.image-cont img {
+width: 100%;
+height: auto;
+display: block;
+object-fit: cover;
+}
+
+.image-text {
+position: absolute;
+top:6.5%;
+left: 40%;
+transform: translateX(-50%);
+width: 70%;
+color: #5B843B;
+/* background: rgba(0, 0, 0, 0.5); */
+font-family: 'Graduate';
+font-weight: 800;
+font-size: 5vw;
+}
+
+/* ABOUT US FONT STUFF */
+.p1{
+color: #ffffff;
+font-family: 'Caprasimo'; 
+/* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ; */
+text-align: center;
+font-size: 1.5rem;
+letter-spacing: .05rem;
+margin:1rem ;
+margin-bottom: 6rem;
+}
+
 
 /* SUBMISSION FORM */
 iframe{
@@ -158,6 +180,7 @@ margin-bottom: 5rem;
 margin-top: 5rem; 
 border: none;
 }
+
 
 
 /* FOOTER */
@@ -182,4 +205,102 @@ footer {
     font-size: 0.65rem;
     color: #888;
     margin-top: 0.2rem;
+}
+
+
+
+/* HORIZONTAL SLIDING BUTTON FOR TUNINGS PAGE */
+/* ========== LAYOUT WRAPPER ========== */
+/* This ensures the entire button + tray unit stays centered on your page */
+.drpdwn-wrapper {
+  display: flex;
+  flex-direction: column; 
+  align-items: center; /* Centering everything horizontally */
+  justify-content: center;
+  width: 100%;
+  gap: 4rem; 
+  padding: 2rem;
+}
+
+/* ========== DROPDOWN COMPONENT ========== */
+.drpdwn-tunings {
+  display: inline-flex;      
+  align-items: center; 
+  justify-content: center; /* Centers the button and tray relative to each other */
+  background: transparent;
+}
+
+/* --- Main Button --- */
+.drpdwn-button {
+  padding: 1.5rem 3rem; 
+  font-size: 1.8rem;      
+  font-weight: 700;
+  background: #2c3e50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  z-index: 5;
+  white-space: nowrap;
+}
+
+/* --- The Slide-out Tray --- */
+.drpdwn-content {
+  width: 0;
+  opacity: 0;
+  overflow: hidden;
+  background: #644848; 
+  height: 4rem; /* Fixed height for consistency */
+  display: flex;
+  align-items: center;
+  transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+}
+
+/* OPEN state: Reduced slide width for better focus */
+.drpdwn-tunings.active .drpdwn-content {
+  width: 27rem; 
+  opacity: 1;
+  border-left: 2px solid #3498db; /* Subtle blue divider */
+}
+
+/* --- The Options Container (The "Shelf") --- */
+.drpdwn-panel {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* THIS CENTERS THE PILLS INSIDE THE TRAY */
+  gap: 2rem;               /* THIS CREATES THE SPACE BETWEEN BUTTONS */
+  width: 100%;             /* Occupy full tray width */
+  min-width: 500px;        /* Matches the tray width to prevent squishing */
+  padding: 0 2rem;
+}
+
+/* --- The Pill Buttons --- */
+.drpdwn-panel a {
+  flex-shrink: 0; 
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  
+  /* Padding creates the pill shape */
+  padding: 1rem 2.5rem; 
+  
+  background: #34495e;
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.drpdwn-panel a:hover {
+  background: #3498db;
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Hide scrollbar just in case of overflow on small screens */
+.drpdwn-panel {
+  scrollbar-width: none;
+}
+.drpdwn-panel::-webkit-scrollbar {
+  display: none;
 }
