@@ -208,27 +208,184 @@ border: none;
 
 /* FOOTER */
 footer {
+    clear: both;
+    display: block;
+    width: 100vw;
+    box-sizing: border-box;
     background-color: #1a1a1a;
-    padding: 0.5rem; 
+    padding: 1rem;
+    margin-top: 5rem;
     text-align: center;
+    flex-shrink: 0; 
+}
+
+.footer-content {
     width: 100%;
-    /* position: fixed;
-    bottom: 0;
-    left: 0; */
+    margin: 0 auto;
 }
 
 .footer-content p {
-    display: inline;
-    margin: 0.5rem; 
-    font-size: 0.85rem;
+    display: block;
+    margin: 0 0;
+    font-size: 1rem;
+    font-family: 'Caprasimo'; 
+}
+
+#footer a {
+    color: #709b8f;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#footer a:hover {
+    text-decoration: underline;
 }
 
 .copyright {
     display: block;
-    font-size: 0.65rem;
-    color: #888;
-    margin-top: 0.2rem;
+    font-size: 0.7rem;
+    margin-top: 1rem;
+    color: #8b8787;
 }
+
+
+
+
+/* OOOOO TUNING PAGE STUFF OOOOO */
+/* LAYOUT STRUCTURE */
+.tuningpage-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 3vw;           
+  padding: 40px 3vw;      
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.tuningpage-content {
+  flex: 2.5;      
+}
+
+/* TUNING PEGS */
+:root {
+  --rod-color: #000000;
+  --text-white: #ffffff;
+}
+
+.tuning-page-section {
+  background-color: transparent;
+  padding-bottom: 5vw;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.tuning-container {
+  display: flex;
+  gap: 2vw;               /* gap btwn rods */
+  align-items: flex-start;
+}
+
+.tuning-rod-wrapper {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  outline: none;
+  transition: transform 0.2s ease;
+  transform-origin: top center;
+}
+
+.tuning-rod-wrapper:hover {
+  transform: scale(1.05);
+}
+
+.note-circle {
+  width: 5.5rem; 
+  height: 5.5rem;
+  background-color: var(--rod-color);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.note-circle span {
+  color: var(--text-white);
+  font-family: 'Graduate', Courier, monospace; 
+  font-size: 1.8rem; 
+  font-weight: bold;
+}
+
+.rod-line {
+  width: 0.5rem; 
+  height: 12rem; 
+  background-color: var(--rod-color);
+  margin-top: -0.5rem;
+  z-index: 1;
+}
+
+/* VIBRATING ANIMATION */
+@keyframes shakeNote {
+  0% { transform: rotate(0deg) translateX(0); }
+  25% { transform: rotate(1.5deg) translateX(1px); }
+  50% { transform: rotate(-1.5deg) translateX(-1px); }
+  75% { transform: rotate(1deg) translateX(1px); }
+  100% { transform: rotate(0deg) translateX(0); }
+}
+
+.is-playing {
+  animation: shakeNote 0.12s linear infinite; /* Triggered by JS */
+}
+
+/* ABOUT SECTION */
+.abt-tuning {
+  flex: .0;              
+  position: sticky;  
+  top: 2.5rem;     
+  max-width:16rem ;  
+  position:sticky ;    
+  color: #ffffff;
+  font-family: 'Caprasimo', serif;
+  background-color: rgba(255, 255, 255, 0.03); 
+  padding: 1rem;
+  padding-left: 0%;
+  border-radius: .4rem;
+  margin-left: 0;
+}
+
+.abt-tuning-h3 {
+  font-size: 1.2rem; 
+  margin-bottom: 0.8rem;
+  margin-top: 0;           
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.abt-tuning-p {
+  font-size: 1rem; 
+  line-height: 1.6;        
+  font-weight: 400;
+  margin: 0;
+  text-align: left; 
+  width:60%
+}
+
+/* ACCORDION MENY 4 SONGS */
+
+
+
+
+
+
+
+
+
+
 
 
 

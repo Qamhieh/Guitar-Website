@@ -35,10 +35,85 @@
 </nav>
 </header>
 
-<h1>TUNING NAME</h1>
+<h1>Narco</h1>
 
+<!-- TUNING PEGS -->
+<div class="tuningpage-layout">
+  
+  <main class="tuningpage-content">
+    <div class="tuning-page-section">
+      <div class="tuning-container">
+        <button class="tuning-rod-wrapper" onclick="playNote('Fs', this)">
+          <div class="note-circle"><span>F#</span></div>
+          <div class="rod-line"></div>
+        </button>
 
+        <button class="tuning-rod-wrapper" onclick="playNote('A', this)">
+          <div class="note-circle"><span>A</span></div>
+          <div class="rod-line"></div>
+        </button>
 
+        <button class="tuning-rod-wrapper" onclick="playNote('D', this)">
+          <div class="note-circle"><span>D</span></div>
+          <div class="rod-line"></div>
+        </button>
+
+        <button class="tuning-rod-wrapper" onclick="playNote('Fs', this)">
+          <div class="note-circle"><span>F#</span></div>
+          <div class="rod-line"></div>
+        </button>
+
+        <button class="tuning-rod-wrapper" onclick="playNote('A', this)">
+          <div class="note-circle"><span>A</span></div>
+          <div class="rod-line"></div>
+        </button>
+
+        <button class="tuning-rod-wrapper" onclick="playNote('E', this)">
+          <div class="note-circle"><span>E</span></div>
+          <div class="rod-line"></div>
+        </button>
+      </div>
+    </div>
+    
+    <!-- ACCORDION MENU4 SONG TABS -->
+    <div class="accordion">
+       </div>
+
+  </main>
+
+<!-- ABOUT SECTION -->
+ <aside class="sidebar-about">
+<div class="abt-tuning">
+<h3 class="abt-tuning-h3">
+About this tuning
+</h3>
+<p class="abt-tuning-p">
+This unique tuning was created by Kevin Cadogan of Third Eye Blind and used on their song 'Narcolepsy', i assume Cadogan came up with it while messing around with the Open D Tuning and came up with this variation
+</p>
+</aside>
+</div>
+
+<script>
+function playNote(noteName, element) {
+  const audioPath = `sounds/${noteName}.wav`;
+  const audio = new Audio(audioPath);
+
+  audio.currentTime = 0; 
+  audio.play();
+
+  element.classList.add('is-playing');
+
+  // RING RUATION
+  const ringDuration = 2000; 
+  // 1000ms = 1sec
+
+      //fade out
+  setTimeout(() => {
+    audio.pause();
+    audio.currentTime = 0; 
+    element.classList.remove('is-playing');
+  }, ringDuration);
+}</script>
 
 <footer>
   <div class="footer-content">
