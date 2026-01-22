@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Altertunes</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Graduate&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- NAVBAR -->
+<header>
+<div id="logo">
+    <a href="index.html">
+    <img src="Asset 1.png" alt="AlterTunes" width="80px"></a> 
+</div>
+<nav class="header-nav">
+<ul class="navbar-ul">
+  <li class="header-a"><a href="about-us.html">About Us</a></li>
+
+  <li class="dropdown">
+    <a href="#" class="dropbtn header-a">Browse Tunings ▾</a>
+    <ul class="dropdown-menu">
+      <li><a href="guitar-tunings.html">Guitar Tunings</a></li>
+      <li><a href="not-available.html">Bass Tunings</a></li>
+    </ul>
+  </li>
+  <li class="header-a"><a href="not-available.html">My Tunings</a></li>
+  <li class="header-a"><a href="submit-tuning.html">Submit Tuning</a></li>
+    <li class="header-a"><a href="not-available.html">Help</a></li>
+</ul>
+</nav>
+</header>
+
+<h1 class="h1-small">  
+  <a href="guitar-tunings.html" title="Back to browsing"> Guitar Tunings </a> > Drop D
+</h1>
+
+<!-- TUNING PEGS -->
+<div class="tuningpage-layout">
+  
+  <main class="tuningpage-content">
+    <div class="tuning-page-section">
+      <div class="tuning-container">
+        <button class="tuning-rod-wrapper" onclick="playNote('D', this)">
+          <div class="note-circle"><span>D</span></div>
+          <div class="rod-line"></div>
+        </button>
+
+        <button class="tuning-rod-wrapper" onclick="playNote('A', this)">
+          <div class="note-circle"><span>A</span></div>
+          <div class="rod-line"></div>
+        </button>
+
+        <button class="tuning-rod-wrapper" onclick="playNote('D', this)">
+          <div class="note-circle"><span>D</span></div>
+          <div class="rod-line"></div>
+        </button>
+
+        <button class="tuning-rod-wrapper" onclick="playNote('G', this)">
+          <div class="note-circle"><span>G</span></div>
+          <div class="rod-line"></div>
+        </button>
+
+        <button class="tuning-rod-wrapper" onclick="playNote('B', this)">
+          <div class="note-circle"><span>B</span></div>
+          <div class="rod-line"></div>
+        </button>
+
+        <button class="tuning-rod-wrapper" onclick="playNote('E', this)">
+          <div class="note-circle"><span>e</span></div>
+          <div class="rod-line"></div>
+        </button>
+      </div>
+    </div>
+    
+    <!-- ACCORDION MENU4 SONG TABS -->
+    <div class="accordion">
+ <div class="accordion-item">
+    <button class="accordion-song">
+      Third Eye Blind - Narcolepsy
+    </button>
+    <div class="accordion-content">
+      <ul class="link-list">
+        <li>Tabs <a href="#">https://wtvlink.com</a></li>
+        <li>Video Tutorial <a href="#">https://wtvlink.com</a></li>
+      </ul>
+    </div>
+     </div>
+  
+    </div>
+    
+  </main>
+
+<!-- ABOUT SECTION -->
+ <aside class="sidebar-about">
+<div class="abt-tuning">
+<h3 class="abt-tuning-h3">
+About this tuning
+</h3>
+<p class="abt-tuning-p">
+In drop D, the three open bass strings form a D5 power chord. Other fifth chords are made when barred with the index finger of the fretting hand shifted up the fretboard. Drop D tuning is frequently used in heavy metal and its various subgenres, as guitarists in these styles often need fast transitions between power chords.
+</p>
+</aside>
+</div>
+
+<script>
+function playNote(noteName, element) {
+  const audioPath = `sounds/${noteName}.wav`;
+  const audio = new Audio(audioPath);
+
+  audio.currentTime = 0; 
+  audio.play();
+
+  element.classList.add('is-playing');
+
+  // RING RUATION
+  const ringDuration = 2000; 
+  // 1000ms = 1sec
+
+      //fade out
+  setTimeout(() => {
+    audio.pause();
+    audio.currentTime = 0; 
+    element.classList.remove('is-playing');
+  }, ringDuration);
+}</script>
+
+<!-- ACCORDION -->
+
+<script>
+  document.querySelectorAll('.accordion-song').forEach(button => {
+    button.addEventListener('click', () => {
+        const accordionContent = button.nextElementSibling;
+
+        // Toggle the 'active' state
+        button.classList.toggle('active');
+
+        if (button.classList.contains('active')) {
+            // Opens the menu to its natural height
+            accordionContent.style.maxHeight = accordionContent.scrollHeight + "px";
+        } else {
+            // Closes the menu
+            accordionContent.style.maxHeight = 0;
+        }
+    });
+});
+</script>
+
+<footer>
+  <div class="footer-content">
+    <p id="footer">If you have cool ideas, contact: <a href="mailto:alternate.tunez@gmail.com">alternate.tunez@gmail.com</a></p>
+    <p class="copyright">&copy; 2026 Not Actually a Company. All rights reserved (not really).</p>
+  </div>
+</footer>
+
+</body>
+</html>
